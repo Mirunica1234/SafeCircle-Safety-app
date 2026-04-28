@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F0F2F5">
+
+    <!-- ─── Header ─── -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#B71C1C"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        android:elevation="6dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:text="←"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📋  Jurnal Evenimente"
+            android:textColor="#FFFFFF"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:layout_marginStart="4dp"/>
+
+        <Button
+            android:id="@+id/btnClearAll"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:text="🗑"
+            android:textSize="20sp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:textColor="#FFCDD2"
+            android:padding="0dp"/>
+    </LinearLayout>
+
+    <!-- ─── Empty state ─── -->
+    <LinearLayout
+        android:id="@+id/emptyState"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🕊️"
+            android:textSize="56sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Niciun eveniment înregistrat"
+            android:textSize="17sp"
+            android:textColor="#9E9E9E"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evenimentele SOS vor apărea aici"
+            android:textSize="13sp"
+            android:textColor="#BDBDBD"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+
+    <!-- ─── Lista ─── -->
+    <ScrollView
+        android:id="@+id/scrollLogs"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:id="@+id/logsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"/>
+    </ScrollView>
+
+</LinearLayout>
